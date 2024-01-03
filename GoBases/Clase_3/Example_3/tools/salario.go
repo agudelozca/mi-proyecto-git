@@ -1,11 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	salarioEmpleado := calcuSalary(1000, "C")
-	fmt.Println("Mi salario es: ", salarioEmpleado)
-}
+package tools
 
 func calcuSalary(minutos int, categoria string) float64 {
 	salarioC := 1000
