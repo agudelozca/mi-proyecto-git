@@ -1,8 +1,7 @@
-package main
+package tools
 
 import (
 	"errors"
-	"fmt"
 )
 
 const (
@@ -52,28 +51,6 @@ func operation(opType string) (func(...int) float64, error) {
 			return float64(maxValue)
 		}, nil
 	default:
-		return nil, errors.New("Operación no definida")
+		return nil, errors.New("operación no definida")
 	}
-}
-
-func main() {
-	// Ejemplos de uso
-	minFunc, err := operation(minimum)
-	averageFunc, err := operation(average)
-	maxFunc, err := operation(maximum)
-
-	if err != nil {
-		fmt.Println("Error:", err)
-		return
-	}
-
-	// Calcular valores
-	minValue := minFunc(2, 3, 3, 4, 10, 2, 4, 5)
-	averageValue := averageFunc(2, 3, 3, 4, 1, 2, 4, 5)
-	maxValue := maxFunc(2, 3, 3, 4, 1, 2, 4, 5)
-
-	// Imprimir resultados
-	fmt.Printf("Valor mínimo: %.2f\n", minValue)
-	fmt.Printf("Valor promedio: %.2f\n", averageValue)
-	fmt.Printf("Valor máximo: %.2f\n", maxValue)
 }
