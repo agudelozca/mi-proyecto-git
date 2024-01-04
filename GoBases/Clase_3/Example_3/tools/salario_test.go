@@ -1,7 +1,7 @@
 package tools_test
 
 import (
-	"intro-unit-testing/Example_2/tools"
+	"intro-unit-testing/Example_3/tools"
 	"testing"
 )
 
