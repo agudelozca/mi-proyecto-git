@@ -8,7 +8,7 @@ import (
 func TestCalcularPromedio(t *testing.T) {
 	// Caso exitoso
 	notas := []int{80, 90, 85, 95, 88}
-	resultado := tools.calcularProm(notas...)
+	resultado := tools.calcularProm(notas)
 	expected := 87.6
 	if resultado != expected {
 		t.Errorf("El promedio calculado no es correcto. Se esperaba %v, pero se obtuvo %v", expected, resultado)
