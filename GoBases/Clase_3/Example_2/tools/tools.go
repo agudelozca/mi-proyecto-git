@@ -1,4 +1,4 @@
-package promedio
+package tools
 
 func calcularProm(notas ...float64) float64 {
 	var sumaTotal float64
